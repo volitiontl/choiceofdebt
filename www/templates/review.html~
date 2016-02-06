@@ -11,7 +11,9 @@
         </div>
     </div>
 
-    Current transaction
+    Remaining uncategorized transactions{{transactions.length}}
+
+
 
     <div ng-show="currentTransaction">
         {{currentTransaction}}

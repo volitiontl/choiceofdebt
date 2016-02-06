@@ -26,7 +26,7 @@ angular.module("app", ['ngRoute'])
     $scope.classify=function(type){
       $scope.currentTransaction["want"] = type
       pushToFirebase()
-      $scope.currentTransaction=transactions.pop()
+      $scope.currentTransaction=ansactions.pop()
       //update firebase
     }
 
