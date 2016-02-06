@@ -22,9 +22,6 @@ var test=require('../controllers/test.js')
       function ($routeProvider) {
         $routeProvider
           .when('/', {templateUrl: 'templates/landingpage.html', controller: 'main'})
-          .when('/signin', {templateUrl: 'templates/signin.html', controller: 'main'})
-          .when('/review', {templateUrl: 'templates/review.html', controller: 'review'})
-          .when('/choices', {templateUrl: 'templates/choices.html', controller: 'choices'})
           .when('/visualize', {templateUrl: 'templates/visualize.html', controller: 'visualize'})
           .when('/test', {templateUrl: 'templates/test.html', controller: 'test'})
       }]

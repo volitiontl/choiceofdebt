@@ -34,3 +34,23 @@
     height:30px;
     background-color:blue
 }
+
+.event{
+    width:100px;
+    position:relative;
+    background-color:lightgrey;
+    border:1px solid #FFF;
+}
+.eventData{
+    width:100;
+    height:100px;
+    background-color:white;
+    position:absolute;
+    width:100px;
+    display:none;
+    border:1px solid #DCA; background:#fffAF0;
+}
+.event:hover .eventData{
+    display:inline;
+}
+
