@@ -39,4 +39,7 @@ dep["calculatePaths"]=function (events) {
 }
 dep["main"]=function main() {
   console.log("hi")
+  console.log("hello world")
+
+
 }

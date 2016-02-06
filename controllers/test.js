@@ -16,4 +16,15 @@ module.exports=function($scope){
   }
 
 
+
+  $scope.profiles=[
+    [
+      {id:0,income:0,net:0,time:0,name:"part time job"},
+      {id:0,income:0,net:0,time:0,name:"part time job"},
+      {id:0,income:0,net:0,time:0,name:"part time job"}
+    ]
+  ];
+
+
+
 }

@@ -14,7 +14,6 @@
     display:inline-block;
 }
 
-
 .stage{
     width:300px;
     height:300px;
@@ -53,4 +52,13 @@
 .event:hover .eventData{
     display:inline;
 }
-
+.container{
+    overflow:auto;
+    width:100%;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
