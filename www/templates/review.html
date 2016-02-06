@@ -1,1 +1,28 @@
-review your data
+<div>
+
+    review your data
+
+    <div class="categorySwipeContainer">
+        <div class="categorySwipe" ng-click="classify('want')">
+            want
+        </div>
+        <div class="categorySwipe" ng-click="classify('need')">
+            need
+        </div>
+    </div>
+
+    Remaining uncategorized transactions{{transactions.length}}
+
+
+
+    <div ng-show="currentTransaction">
+        {{currentTransaction}}
+    </div>
+
+    <!--<div ng-repeat="x in transactions">-->
+        <!--{{x.$}}======{{x.type}}++++=dsafsf {{x.category}}-->
+    <!--</div>-->
+
+
+    <a href="#choices">next</a>
+</div>

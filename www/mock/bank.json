@@ -1,0 +1,7 @@
+{
+  "spending": [
+    {"$":100.00,"type":"debit","category":"food"},
+    {"$":20.00,"type":"debit","category":"food"},
+    {"$":10.00,"type":"debit","category":"categories"}
+  ]
+}
