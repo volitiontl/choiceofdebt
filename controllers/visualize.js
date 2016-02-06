@@ -21,8 +21,8 @@ module.exports = function ($scope) {
     legend: {
       enabled: false
     },
-    yAxis: {min: -1000, max: 1000},
-    xAxis: {min: -2, max: 20},
+    yAxis: {min: -1000, max: 1000,title:{text:"Debt/Savings($)"}},
+    xAxis: {min: -2, max: 20,title:{text:"Income($1000/year)"}},
 
     series: [{
       data: [],
@@ -65,7 +65,6 @@ module.exports = function ($scope) {
     var instance = [];
     instance[0] = CalculatePaths(events)
     function tick() {
-      console.log("working?")
       if (i > duration) {
         clearInterval(loopInterval)
       }
