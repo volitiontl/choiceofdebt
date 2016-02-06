@@ -1,3 +1,5 @@
 .idea
 node_modules/
 www/main.out.*
+*~
+*.swp
