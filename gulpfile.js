@@ -11,7 +11,7 @@ gulp.task('watch', function () {
     }
   });
 
-  gulp.watch(["www/*.*","www/*/*.*","dependencies/*.*","!www/*.out.js"],function(){
+  gulp.watch(["www/*.*","www/*/*.*","controllers/*.*","dependencies/*.*","!www/*.out.js"],function(){
     try{
       exec("node build-deps.js > ./www/deps.out.js");//needed because loaddir doesn't work with browserify yet.
       exec("browserify ./www/main.js -o ./www/main.out.js");
