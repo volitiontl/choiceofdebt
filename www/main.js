@@ -11,6 +11,82 @@ angular.module("app", ['ngRoute'])
   .controller("main", function ($rootScope) {
 
   })
+  .controller("visualize",function($scope){
+
+
+    var events=[
+      {id:0,income:1,net:0,time:0,name:"part-time job"},
+      {id:0,income:0,net:-10,time:10,name:"going to school"},
+      {id:0,income:0,net:-10,time:20,name:"another loan"},
+      {id:0,income:1,net:0,time:100,name:""},
+      {id:2,income:0,net:-10,time:11,name:""},
+      {id:2,income:0,net:-10,time:23,name:""},
+      {id:2,income:0,net:-10,time:104,name:""}
+    ]
+
+
+
+
+    var temp=_(events)
+      .groupBy("id")
+      .map(function(a){
+        return _.indexBy(a,"time")
+      })
+      .value()
+
+    var eventsIndex= _.indexBy(events,"time")
+    var delay=20;
+    var i=0;
+    var duration=500
+    var loopInterval;
+
+    function update(){
+      i=0;
+
+      $scope.balls=_(temp)
+        .map(function(a,b){
+          return {id:b,x:0,y:0,color:"red",size:10,income:0,net:0,eventsIndex:a}
+        })
+        .value()
+
+    }
+    update()
+
+    function process(a) {
+
+      if (a.eventsIndex[i]) {
+        a.income = eventsIndex[i].income
+        a.net += eventsIndex[i].net
+      }
+
+      a.x = a.income*20
+      a.net+= a.income
+      a.y = -a.net+200
+    }
+
+
+
+
+    function tick() {
+
+      if (i >= duration) clearInterval(loopInterval);
+      var t = $scope.balls;
+      _.forEach(t, process)
+      i++
+      $scope.$apply()
+    }
+
+
+    $scope.start=function(){
+      loopInterval=setInterval(tick,delay)
+    }
+    $scope.pause=function(){}
+    $scope.replay=function(){
+      update()
+    }
+
+
+  })
   .controller("choices",function($scope,$rootScope){
 
     $scope.test=$rootScope.transactions
@@ -86,6 +162,7 @@ angular.module("app", ['ngRoute'])
         .when('/signin', {templateUrl: 'templates/signin.html', controller: 'main'})
         .when('/review', {templateUrl: 'templates/review.html', controller: 'review'})
         .when('/choices', {templateUrl: 'templates/choices.html', controller: 'choices'})
+        .when('/visualize', {templateUrl: 'templates/visualize.html', controller: 'visualize'})
     }]
 )
   .directive('statefin',function(){

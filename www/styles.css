@@ -13,3 +13,24 @@
     background-color:lightgrey;
     display:inline-block;
 }
+
+
+.stage{
+    width:300px;
+    height:300px;
+    background-color:lightgrey;
+    position:relative;
+}
+
+.ball{
+    width:30px;
+    height:30px;
+    position:absolute;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+.button{
+    width:100px;
+    height:30px;
+    background-color:blue
+}

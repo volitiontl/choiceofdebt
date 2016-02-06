@@ -1,0 +1,19 @@
+<div>
+    <div class="stage">
+        <div class="ball" ng-repeat="x in balls" style="background-color:{{x.color}};top:{{x.y}};left:{{x.x}}">
+
+        </div>
+    </div>
+
+    <div style="position:relative">
+        <div ng-click="start()">
+            start
+        </div>
+        <div ng-click="pause()">
+            pause
+        </div>
+        <div ng-click="replay()">
+            replay
+        </div>
+    </div>
+</div>
