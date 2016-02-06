@@ -1,6 +1,7 @@
 module.exports = function ($scope) {
 
   $scope.highchartsNG = {
+
     plotOptions: {
       series: {
         animation: false,
@@ -14,7 +15,8 @@ module.exports = function ($scope) {
     options: {
       chart: {
         type: 'bubble'
-      }
+      },
+      navigator: {enabled: false}
     },
     legend: {
       enabled: false
@@ -47,37 +49,65 @@ module.exports = function ($scope) {
   ]
 
   var CalculatePaths = require('../dependencies/calculatePaths.js')
-  var instance = CalculatePaths(events)
 
   var delay = 20;
-  var i = 0;
   var duration = 100
   var loopInterval;
 
 
-  function tick() {
-    if (i > duration) {
-      clearInterval(loopInterval)
+  function render(events) {
+    $scope.highchartsNG.series[0] = {
+      data: [],
+      sizeBy: 'width',
+      enableMouseTracking: false
     }
-    _.forEach(instance.tick(), function (a, b) {
-      tt[b] = {x: a.x, y: a.y, z: 1}
-    })
-    i++
-    $scope.$apply()
-  }
+    var i = 0;
+    var instance = [];
+    instance[0] = CalculatePaths(events)
+    function tick() {
+      console.log("working?")
+      if (i > duration) {
+        clearInterval(loopInterval)
+      }
+      _.forEach(instance[0].tick(), function (a, b) {
+        $scope.highchartsNG.series[0].data[b] = {x: a.x, y: a.y, z: 1}
+      })
+      i++
+      $scope.$apply()
+    }
 
-  setTimeout(tick, 0)
-
-  $scope.start = function () {
-    i = 1;
     loopInterval = setInterval(tick, delay)
   }
+
+
+  $scope.start = function () {
+    render(events)
+  }
   $scope.pause = function () {
+
   }
   $scope.replay = function () {
-    instance = calculatePaths(events)
+    instance[0] = CalculatePaths(events)
     tick()
   }
 
+  var list = {
+    "one": events,
+    "two": [
+      {id: 0, income: 1, net: 0, time: 0, name: "part-time job"}
+    ],
+    "three": [
+      {id: 0, income: 3, net: 0, time: 0, name: "part-time job"},
+      {id: 1, income: 3, net: -20, time: 0, name: "part-time job"},
+      {id: 2, income: 3, net: -60, time: 0, name: "part-time job"}
+    ]
+  }
+
+  $scope.testabc = ["one", "two", "three"]
+  $scope.changeEvent = function (a) {
+    if (list[a]) {
+      render(list[a])
+    }
+  }
 
 }
