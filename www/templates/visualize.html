@@ -1,9 +1,12 @@
 <div>
-    <div class="stage">
-        <div class="ball" ng-repeat="x in balls" style="background-color:{{x.color}};top:{{x.y}};left:{{x.x}}">
+    <!--<div class="stage">-->
+        <!--<hr>-->
+        <!--<div class="ball" ng-repeat="x in balls" style="background-color:{{x.color}};top:{{x.y}};left:{{x.x}}">-->
 
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>-->
+
+    <highchart id="chart1" config="highchartsNG"></highchart>
 
     <div style="position:relative">
         <div ng-click="start()">
