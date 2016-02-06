@@ -3,10 +3,6 @@
 <statefin data="two"></statefin>
 <statefin data="three"></statefin>
 
-<div>
-    Coffee<input type="checkbox"></input><br>
-    Rent<input type="checkbox"></input><br>
-    catering<input type="checkbox"></input>
+<div ng-repeat="x in test">
+    {{x.name}} <input type="checkbox" ng-model="x.enable" ng-click="update()"></input>
 </div>
-
-{{test}}

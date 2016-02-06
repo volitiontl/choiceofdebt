@@ -23,17 +23,24 @@ angular.module("app", ['ngRoute'])
 
 
     function calculateValue(current,expenses,time){
-      return _(expenses)
+
+      return Math.floor(_(expenses)
         .map(function(a){
-          return a.value*time/ a.interval
+            if(!a.enable) return 0
+          return a.$*time/ a.interval
         })
-        .sum()+current
+        .sum()+current)
     }
 
 
-    $scope.one=2
-    $scope.two=6
-    $scope.three=5
+    function update(){
+      $scope.one=calculateValue(0,$scope.test,1000)
+      $scope.two=calculateValue(0,$scope.test,2000)
+      $scope.three=calculateValue(0,$scope.test,5000)
+    }
+
+    update()
+    $scope.update=update;
 
   })
   .controller("review",function($scope,$http,$rootScope){

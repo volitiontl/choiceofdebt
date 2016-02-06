@@ -1,7 +1,7 @@
 {
   "spending": [
-    {"$":100.00,"type":"debit","category":"food"},
-    {"$":20.00,"type":"debit","category":"food"},
-    {"$":10.00,"type":"debit","category":"categories"}
+    {"$":100.00,"type":"debit","category":"food","interval":10,"name":"coffee","enable":true},
+    {"$":20.00,"type":"debit","category":"food","interval":15,"name":"donuts","enable":true},
+    {"$":10.00,"type":"debit","category":"categories","interval":2,"name":"cheeseburgers","enable":true}
   ]
 }
