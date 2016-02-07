@@ -22,6 +22,12 @@
 })()
 
 
+function updateChart(){
+  stage.children[0].instance_6.gotoAndStop("one")
+
+}
+
+
 stage.children[0].login_btn.on("click", function () {
   stage.children[0].gotoAndStop("dashboard")
   loadDashBoard();
@@ -42,7 +48,8 @@ function loadDashBoard() {
   })
 
   stage.children[0].income_btn.on("click", function () {
-    alert("cash")
+    stage.children[0].instance_6.gotoAndStop("one")
+    
   })
 
   stage.children[0].instance_3.instance.on("click", function () {
@@ -60,8 +67,19 @@ function loadDashBoard() {
   stage.children[0].instance_3.instance_4.on("click", function () {
     alert("teal")
   })
+
+
 }
 
 window.enterFrame=function(a){
   console.log("entering frame",a)
+  if(a=="review"){
+
+    stage.children[0].instance.children[2].on("click",function(){
+      alert("want")
+    })
+    stage.children[0].instance.children[1].on("click",function(){
+      alert("need")
+    })
+  }
 }
