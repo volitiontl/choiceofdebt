@@ -44,42 +44,66 @@ function loadDashBoard() {
 
   //add income button
   stage.children[0].instance_4.on("click", function () {
-    alert("benchmark")
+    stage.children[0].instance_6.gotoAndStop("benchmark")
+    //alert("benchmark")
   })
 
   stage.children[0].income_btn.on("click", function () {
-    stage.children[0].instance_6.gotoAndStop("one")
-    
+    stage.children[0].instance_6.gotoAndStop("income")
+
   })
 
   stage.children[0].instance_3.instance.on("click", function () {
-    alert("green")
+    stage.children[0].instance_6.gotoAndStop("cat1")
+    //alert("green")
   })
   stage.children[0].instance_3.instance_1.on("click", function () {
-    alert("orange")
+    stage.children[0].instance_6.gotoAndStop("cat2")
+    //alert("orange")
   })
   stage.children[0].instance_3.instance_2.on("click", function () {
-    alert("pink")
+    stage.children[0].instance_6.gotoAndStop("cat3")
+    //alert("pink")
   })
   stage.children[0].instance_3.instance_3.on("click", function () {
-    alert("purple")
+    stage.children[0].instance_6.gotoAndStop("cat4")
+    //alert("purple")
   })
   stage.children[0].instance_3.instance_4.on("click", function () {
-    alert("teal")
+    stage.children[0].instance_6.gotoAndStop("cat5")
+    //alert("teal")
   })
 
 
 }
 
+var i=0;
 window.enterFrame=function(a){
   console.log("entering frame",a)
   if(a=="review"){
 
     stage.children[0].instance.children[2].on("click",function(){
-      alert("want")
+      if(i>=3){
+        i=0;
+        stage.children[0].gotoAndPlay("finishreview")
+        return
+      }
+      stage.children[0].instance.children[3].play("full"+i++)
+      if(i>=3){
+        i=0;
+        stage.children[0].gotoAndPlay("finishreview")
+        return
+      }
+
     })
     stage.children[0].instance.children[1].on("click",function(){
-      alert("need")
+      stage.children[0].instance.children[3].play("full"+i++)
+      //alert("need")
     })
   }
+  console.log("here",a)
+  if(a=="end"){
+    stage.children[0].instance_6.gotoAndStop("diff")
+  }
+
 }
