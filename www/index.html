@@ -1,52 +1,28 @@
-<hhtml>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-        <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hackathon</title>
+
+    <script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
+    <script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
+    <script src="hackathon.js"></script>
 
 
-    </head>
-    <body style="background-color:lightgrey">
+    <script>
+        var canvas, stage, exportRoot;
 
 
-    <div style="width:100%;height:100px;background-color:grey">
+    </script>
+</head>
 
-        <div class="container">
-            <div class="left">logo</div>
-            <div class="left">abc</div>
-            <div class="left">abc1</div>
-            <div class="left">abc2</div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="left" style="width:300px;height:600px;background:white">
-            <div class="contianer">
-                <div>show income</div>
-                <div>show category</div>
-                <div>show expense</div>
-            </div>
+<body style="background-color:#D4D4D4">
+<canvas id="canvas" width="900" height="600" style="background-color:#999999"></canvas>
 
-        </div>
-        <div id="container" class="left"
-             style="height: 400px; min-width: 700px; max-width: 700px; margin: 0 auto"></div>
-        <div class="left" style="width:200px;height:400px;">
-            <div class="container">
-                <div class="left daterange">month</div>
-                <div class="left daterange">year</div>
-                <div class="left daterange">5 year</div>
-            </div>
-            <div id="totalIncome">abc</div>
-            <div id="totalExpenses">abc</div>
-        </div>
-    </div>
+<script src="deps.out.js"></script>
+<script src="main.out.js"></script>
+</body>
+</html>
 
-    <div style="width:100%;height:100px;background-color:grey;">
-        footer
-    </div>
 
-    <script src="deps.out.js"></script>
-    <script src="main.out.js"></script>
-    </body>
-</hhtml>
