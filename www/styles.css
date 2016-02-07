@@ -1,57 +1,57 @@
-.categorySwipe{
-    width:100px;
-    height:100px;
-    background-color:red;
-    /*float:left;*/
-    display:inline-block;
-}
+/*.categorySwipe{*/
+    /*width:100px;*/
+    /*height:100px;*/
+    /*background-color:red;*/
+    /*/!*float:left;*!/*/
+    /*display:inline-block;*/
+/*}*/
 
-.stateFin{
+/*.stateFin{*/
 
-    width:100px;
-    height:100px;
-    background-color:lightgrey;
-    display:inline-block;
-}
+    /*width:100px;*/
+    /*height:100px;*/
+    /*background-color:lightgrey;*/
+    /*display:inline-block;*/
+/*}*/
 
-.stage{
-    width:300px;
-    height:300px;
-    background-color:lightgrey;
-    position:relative;
-}
+/*.stage{*/
+    /*width:300px;*/
+    /*height:300px;*/
+    /*background-color:lightgrey;*/
+    /*position:relative;*/
+/*}*/
 
-.ball{
-    width:30px;
-    height:30px;
-    position:absolute;
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-}
-.button{
-    width:100px;
-    height:30px;
-    background-color:blue
-}
+/*.ball{*/
+    /*width:30px;*/
+    /*height:30px;*/
+    /*position:absolute;*/
+    /*opacity: 0.4;*/
+    /*filter: alpha(opacity=40);*/
+/*}*/
+/*.button{*/
+    /*width:100px;*/
+    /*height:30px;*/
+    /*background-color:blue*/
+/*}*/
 
-.event{
-    width:100px;
-    position:relative;
-    background-color:lightgrey;
-    border:1px solid #FFF;
-}
-.eventData{
-    width:100;
-    height:100px;
-    background-color:white;
-    position:absolute;
-    width:100px;
-    display:none;
-    border:1px solid #DCA; background:#fffAF0;
-}
-.event:hover .eventData{
-    display:inline;
-}
+/*.event{*/
+    /*width:100px;*/
+    /*position:relative;*/
+    /*background-color:lightgrey;*/
+    /*border:1px solid #FFF;*/
+/*}*/
+/*.eventData{*/
+    /*width:100;*/
+    /*height:100px;*/
+    /*background-color:white;*/
+    /*position:absolute;*/
+    /*width:100px;*/
+    /*display:none;*/
+    /*border:1px solid #DCA; background:#fffAF0;*/
+/*}*/
+/*.event:hover .eventData{*/
+    /*display:inline;*/
+/*}*/
 .container{
     overflow:auto;
     width:100%;
@@ -61,4 +61,15 @@
 }
 .right{
     float:right;
+}
+
+.daterange{
+    width:25%;
+    background-color:grey;
+    padding:5px;
+    border-style:solid;
+    border-color:red;
+}
+.daterange:hover{
+    background-color:lightgrey;
 }

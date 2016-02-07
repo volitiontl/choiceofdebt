@@ -1,0 +1,11 @@
+{
+  "data": [
+    {"time":0,value:100.00,"name":"paycheck"},
+    {"time":1,value:-2.00,"name":"coffee"},
+    {"time":1,value:-2.00,"name":"coffee"},
+    {"time":1,value:-2.00,"name":"coffee"}
+    {"time":1,value:-2.00,"name":"coffee"},
+    {"time":1,value:-2.00,"name":"coffee"},
+    {"time":1,value:-2.00,"name":"coffee"}
+  ]
+}

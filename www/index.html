@@ -1,19 +1,10 @@
 <hhtml>
     <head>
         <link rel="stylesheet" type="text/css" href="styles.css">
-
-        <!--<script src="https://code.highcharts.com/highcharts.js"></script>-->
-        <!--<script src="https://code.highcharts.com/highcharts-more.js"></script>-->
-
-        <!--&lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.0.5/bluebird.js"></script>&ndash;&gt;-->
-        <!--&lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>&ndash;&gt;-->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>-->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular.min.js"></script>-->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular-route.min.js"></script>-->
-        <!--&lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>&ndash;&gt;-->
-        <!--<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>-->
-        <!--<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>-->
-        <!--<script src="https://rawgithub.com/pablojim/highcharts-ng/master/dist/highcharts-ng.js"</script>-->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
 
 
     </head>
@@ -22,19 +13,32 @@
 
     <div style="width:100%;height:100px;background-color:grey">
 
-        header
+        <div class="container">
+            <div class="left">logo</div>
+            <div class="left">abc</div>
+            <div class="left">abc1</div>
+            <div class="left">abc2</div>
+        </div>
     </div>
     <div class="container">
-
-
         <div class="left" style="width:300px;height:600px;background:white">
-            options
+            <div class="contianer">
+                <div>show income</div>
+                <div>show category</div>
+                <div>show expense</div>
+            </div>
+
         </div>
-        <div class="left" style="width:700px;height:400px;background:darkgrey">
-            chart
-        </div>
-        <div class="left" style="width:200px;height:400px;background:blue">
-            other?
+        <div id="container" class="left"
+             style="height: 400px; min-width: 700px; max-width: 700px; margin: 0 auto"></div>
+        <div class="left" style="width:200px;height:400px;">
+            <div class="container">
+                <div class="left daterange">month</div>
+                <div class="left daterange">year</div>
+                <div class="left daterange">5 year</div>
+            </div>
+            <div id="totalIncome">abc</div>
+            <div id="totalExpenses">abc</div>
         </div>
     </div>
 
