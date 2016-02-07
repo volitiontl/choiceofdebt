@@ -83,7 +83,7 @@ window.enterFrame=function(a){
   if(a=="review"){
 
     stage.children[0].instance.children[2].on("click",function(){
-      if(i>=3){
+      if(i>=2){
         i=0;
         stage.children[0].gotoAndPlay("finishreview")
         return
@@ -93,7 +93,7 @@ window.enterFrame=function(a){
 
     })
     stage.children[0].instance.children[1].on("click",function(){
-      if(i>=3){
+      if(i>=2){
         i=0;
         stage.children[0].gotoAndPlay("finishreview")
         return
