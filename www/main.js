@@ -89,14 +89,15 @@ window.enterFrame=function(a){
         return
       }
       stage.children[0].instance.children[3].play("full"+i++)
+
+
+    })
+    stage.children[0].instance.children[1].on("click",function(){
       if(i>=3){
         i=0;
         stage.children[0].gotoAndPlay("finishreview")
         return
       }
-
-    })
-    stage.children[0].instance.children[1].on("click",function(){
       stage.children[0].instance.children[3].play("full"+i++)
       //alert("need")
     })
